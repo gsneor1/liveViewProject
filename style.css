@@ -1,0 +1,111 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General page styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.menu {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-top: 30px;
+    color: #444;
+}
+
+/* Menu item styling */
+.menu-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Creates three equal columns */
+    gap: 15px; /* Adds space between grid items */
+    max-width: 900px;
+    margin: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.item-name {
+    font-size: 1.25rem;
+    color: #555;
+}
+
+.item-price {
+    font-size: 1.25rem;
+    color: #888;
+}
+
+.item-stock {
+    font-size: 1rem;
+    color: #ff6347; /* Tomato red color for stock info */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .menu {
+        grid-template-columns: 1fr; /* Stack items in one column for smaller screens */
+    }
+
+    .menu-item {
+        grid-template-columns: 1fr; /* Stack menu items vertically on small screens */
+        text-align: left;
+    }
+
+    .item-name, .item-price, .item-stock {
+        font-size: 1.1rem;
+    }
+}
+
+
+h2 {
+    font-size: 1.75rem;
+    margin-top: 30px;
+    color: #444;
+    grid-column: span 3; /* Makes the heading span across all three columns */
+}
+
+/* Menu item styling */
+.menu-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* Adjusted to ensure proper column distribution */
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.item-name {
+    font-size: 1.25rem;
+    color: #555;
+}
+
+.item-price {
+    font-size: 1.25rem;
+    color: #888;
+    text-align: center;
+}
+
+.item-stock {
+    font-size: 1rem;
+    color: #ff6347; /* Tomato red color for stock info */
+    text-align: center;
+}
+
+/* Responsive styles */
