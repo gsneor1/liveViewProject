@@ -1,16 +1,10 @@
 {
-"versionNumber": 1,
+    "versionNumber": 1,
     "menu": {
-        "drinks": [
-            { "name": "Espresso", "price": 2.5 },
-            { "name": "Latte", "price": 3.5 },
-            { "name": "Cappuccino", "price": 3.0 },
-            { "name": "Americano", "price": 2.75 }
-        ],
-        "bakedGoods": [
-            { "name": "Croissant", "price": 2.0, "stock": 5 },
-            { "name": "Muffin", "price": 1.75, "stock": 12 },
-            { "name": "Scone", "price": 2.25, "stock": 7 }
-        ]
+      "bakedGoods": [
+        { "name": "Croissant", "price": 2.00, "stock": 5 },
+        { "name": "Muffin", "price": 1.75, "stock": 10 },
+        { "name": "Scone", "price": 2.25, "stock": 6 }
+      ]
     }
-}
+  }
