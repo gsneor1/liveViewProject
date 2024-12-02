@@ -1,10 +1,11 @@
 {
-    "versionNumber": 1,
+    "versionNumber": 2
+    ,
     "menu": {
       "bakedGoods": [
-        { "name": "Croissant", "price": 2.00, "stock": 5 },
-        { "name": "Muffin", "price": 1.75, "stock": 10 },
-        { "name": "Scone", "price": 2.25, "stock": 6 }
+        { "name": "Croissant", "price": 2.00, "stock": 4 },
+        { "name": "Muffin", "price": 1.75, "stock": 9 },
+        { "name": "Scone", "price": 2.25, "stock": 8 }
       ]
     }
   }
