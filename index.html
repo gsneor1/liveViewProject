@@ -6,7 +6,6 @@
     <title>liveView Screen</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<script src="updateMeta.js"></script>
 <body>
     <header>
         <h1>Coffee Shop Menu</h1>
@@ -33,22 +32,24 @@
         </div>
 
         <h2>Baked Goods</h2>
-        <div class="menu-item" id="croissant">
+        <div class="menu-item" id="croissant" data-item="croissant">
             <div class="item-name">Croissant</div>
             <div class="item-price">$2.00</div>
-            <div class="item-stock">Stock: 5</div>
+            <div class="item-stock">Stock: <span class="stock-value" data-default="5">5</span></div>
         </div>
-        <div class="menu-item" id="muffin">
+        <div class="menu-item" id="muffin" data-item="muffin">
             <div class="item-name">Muffin</div>
             <div class="item-price">$1.75</div>
-            <div class="item-stock">Stock: 10</div>
+            <div class="item-stock">Stock: <span class="stock-value" data-default="10">10</span></div>
         </div>
-        <div class="menu-item" id="scone">
+        <div class="menu-item" id="scone" data-item="scone">
             <div class="item-name">Scone</div>
             <div class="item-price">$2.25</div>
-            <div class="item-stock">Stock: 6</div>
+            <div class="item-stock">Stock: <span class="stock-value" data-default="6">6</span></div>
         </div>
 
     </section>
+
+    <script src="updateMeta.js"></script>
 </body>
 </html>
