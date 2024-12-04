@@ -33,11 +33,11 @@ function updateBakedGoods(bakedGoods) {
     });
 }
 
-//refresh the page every 30 seconds
+//refresh the page every 10 seconds
 function autoRefreshPage() {
     setTimeout(() => {
-        location.reload(); // Reload the page
-    }, 30000); // 30 seconds
+        location.reload(); //page reload
+    }, 10000);
 }
 
 //check for updates every 5 seconds
