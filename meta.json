@@ -1,8 +1,8 @@
 {
-  "versionNumber": 2,
+  "versionNumber": 3,
   "bakedGoods": {
-      "croissant": 4,
+      "croissant": 5,
       "muffin": 7,
-      "scone": 2
+      "scone": 6
   }
 }
