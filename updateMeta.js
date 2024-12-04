@@ -7,7 +7,7 @@ let lastVersion = null;
 //get and update page
 async function checkForUpdates() {
     try {
-        const response = await fetch(metaUrl, { cache: 'no-cache' });
+        const response = await fetch(`${metaUrl}?t=${Date.now()}`, { cache: 'no-cache' });
         const metaData = await response.json();
 
         //check if the version number changed
