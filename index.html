@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Grant Sneor">
+    <meta name="description" content="A live view of a coffee shop menu, running on rpi zero 2 w">
     <title>liveView Screen</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,45 +13,48 @@
         <h1>Coffee Shop Menu</h1>
     </header>
     
-    <section class="menu">
+    <div class="menu-container">
+        <section class="menu">
+            <h2>Drinks</h2>
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <span class="item-name">Espresso</span>
+                    <span class="item-price">$2.50</span>
+                </li>
+                <li class="menu-item">
+                    <span class="item-name">Latte</span>
+                    <span class="item-price">$3.50</span>
+                </li>
+                <li class="menu-item">
+                    <span class="item-name">Cappuccino</span>
+                    <span class="item-price">$3.00</span>
+                </li>
+                <li class="menu-item">
+                    <span class="item-name">Americano</span>
+                    <span class="item-price">$2.75</span>
+                </li>
+            </ul>
+            <h2>Baked Goods</h2>
+            <ul class="menu-list">
+                <li class="menu-item" id="croissant">
+                    <span class="item-name">Croissant</span>
+                    <span class="item-price">$2.00</span>
+                    <span class="item-stock">Stock: <span class="stock-value">5</span></span>
+                </li>
+                <li class="menu-item" id="muffin">
+                    <span class="item-name">Muffin</span>
+                    <span class="item-price">$1.75</span>
+                    <span class="item-stock">Stock: <span class="stock-value">10</span></span>
+                </li>
+                <li class="menu-item" id="scone">
+                    <span class="item-name">Scone</span>
+                    <span class="item-price">$2.25</span>
+                    <span class="item-stock">Stock: <span class="stock-value">6</span></span>
+                </li>
+            </ul>
+        </section>
+    </div>
 
-        <h2>Drinks</h2>
-        <div class="menu-item">
-            <div class="item-name">Espresso</div>
-            <div class="item-price">$2.50</div>
-        </div>
-        <div class="menu-item">
-            <div class="item-name">Latte</div>
-            <div class="item-price">$3.50</div>
-        </div>
-        <div class="menu-item">
-            <div class="item-name">Cappuccino</div>
-            <div class="item-price">$3.00</div>
-        </div>
-        <div class="menu-item">
-            <div class="item-name">Americano</div>
-            <div class="item-price">$2.75</div>
-        </div>
-
-        <h2>Baked Goods</h2>
-        <div class="menu-item" id="croissant" data-item="croissant">
-            <div class="item-name">Croissant</div>
-            <div class="item-price">$2.00</div>
-            <div class="item-stock">Stock: <span class="stock-value" data-placeholder="5">5</span></div>
-        </div>
-        <div class="menu-item" id="muffin" data-item="muffin">
-            <div class="item-name">Muffin</div>
-            <div class="item-price">$1.75</div>
-            <div class="item-stock">Stock: <span class="stock-value" data-placeholder="10">10</span></div>
-        </div>
-        <div class="menu-item" id="scone" data-item="scone">
-            <div class="item-name">Scone</div>
-            <div class="item-price">$2.25</div>
-            <div class="item-stock">Stock: <span class="stock-value" data-placeholder="6">6</span></div>
-        </div>
-
-    </section>
-
-    <script src="updateMeta.js"></script>
+    <script src="updateMeta.js" defer></script>
 </body>
 </html>

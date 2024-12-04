@@ -1,37 +1,40 @@
-let currentVersion = null;
+//access meta.json
+const metaUrl = './meta.json';
 
+//initialize lastVersion to null
+let lastVersion = null;
+
+//get and update page
 async function checkForUpdates() {
     try {
-        // Fetch the updated meta.json file
-        const response = await fetch('meta.json');
-        const data = await response.json();
+        const response = await fetch(metaUrl, { cache: 'no-cache' });
+        const metaData = await response.json();
 
-        // Initialize currentVersion or update if version number has changed
-        if (currentVersion === null) {
-            currentVersion = data.versionNumber;
-        }
-
-        // If version number has changed, update the stock values
-        if (data.versionNumber !== currentVersion) {
-            currentVersion = data.versionNumber; // Update the version number
-            refreshPageWithUpdatedData(data); // Refresh the content
+        //check if the version number changed
+        if (lastVersion === null) {
+            lastVersion = metaData.versionNumber; //set initial version number
+            updateBakedGoods(metaData.bakedGoods); //set initial stock
+        } else if (metaData.versionNumber !== lastVersion) {
+            lastVersion = metaData.versionNumber; //update version number
+            updateBakedGoods(metaData.bakedGoods); //update stock
         }
     } catch (error) {
-        console.error("Could not get meta.json:", error);
+        console.error('Error fetching meta.json:', error);
     }
 }
 
-function refreshPageWithUpdatedData(data) {
-    // Update the stock for each baked good item
-    data.menu.bakedGoods.forEach(item => {
-        const stockElement = document.querySelector(`#${item.name.toLowerCase()} .stock-value`);
-        
+//update the baked goods in stock
+function updateBakedGoods(bakedGoods) {
+    Object.keys(bakedGoods).forEach(item => {
+        const stockElement = document.querySelector(`#${item} .stock-value`);
         if (stockElement) {
-            // Change the displayed text inside the span to the new stock value
-            stockElement.textContent = item.stock;
+            stockElement.textContent = bakedGoods[item]; // Update the stock count
         }
     });
 }
 
-// Check for updates every 5 seconds
+//check for updates every 5 seconds
 setInterval(checkForUpdates, 5000);
+
+//initial check for updates
+checkForUpdates();

@@ -1,11 +1,8 @@
 {
-    "versionNumber": 1
-    ,
-    "menu": {
-      "bakedGoods": [
-        { "name": "Croissant", "stock": 5 },
-        { "name": "Muffin", "stock": 10 },
-        { "name": "Scone", "stock": 6 }
-      ]
-    }
+  "versionNumber": 1,
+  "bakedGoods": {
+      "croissant": 5,
+      "muffin": 8,
+      "scone": 2
   }
+}
