@@ -33,8 +33,18 @@ function updateBakedGoods(bakedGoods) {
     });
 }
 
-//check for updates every 5 seconds
-setInterval(checkForUpdates, 5000);
+//refresh the page every 30 seconds
+function autoRefreshPage() {
+    setTimeout(() => {
+        location.reload(); // Reload the page
+    }, 30000); // 30 seconds
+}
 
-//initial check for updates
+//check for updates every 5 seconds
+setInterval(checkForUpdates, 1000);
+
+//initialize auto refresh
+autoRefreshPage();
+
+//initialize checking for updates
 checkForUpdates();
