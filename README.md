@@ -44,3 +44,4 @@ Industries like digital advertising, public transit, retail, and restaurants all
 This project bridges that gap by using low-cost hardware like a Raspberry Pi and free hosting through GitHub Pages to deliver a scalable, real-time display solution. It’s flexible enough to work across industries and provides a practical, budget-friendly way to show live data without unnecessary complexity.
 
 ## Project Demos
+Link to video: https://youtu.be/giDbg9cdfGw
